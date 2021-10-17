@@ -5,11 +5,11 @@
  * under the terms of the MIT license. See LICENSE for details.
  */
 
-#include <cellular_automata.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include <cellular_automata.h>
 
 struct cellular_map
 {

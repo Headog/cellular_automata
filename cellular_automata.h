@@ -8,14 +8,14 @@
 #ifndef _CELLUAR_AUTOMATA_H_
 #define _CELLUAR_AUTOMATA_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <map.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 struct celluar_map;
 typedef struct celluar_map celluar_map_t;
