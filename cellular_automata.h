@@ -17,7 +17,8 @@
 extern "C" {
 #endif
 
-typedef bool* celluar_map_t;
+struct celluar_map;
+typedef struct celluar_map celluar_map_t;
 typedef map_bool_t celluar_rule_t;
 
 celluar_rule_t create_random_rule();

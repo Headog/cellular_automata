@@ -11,7 +11,12 @@
 extern "C" {
 #endif
 
-
+struct cellular_map
+{
+    int32_t width;
+    int32_t height;
+    bool* cells;
+};
 
 #ifdef __cplusplus
 }
