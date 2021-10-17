@@ -5,10 +5,6 @@
  * under the terms of the MIT license. See LICENSE for details.
  */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <cellular_automata.h>
 
 struct cellular_map
@@ -17,7 +13,3 @@ struct cellular_map
     int32_t height;
     bool* cells;
 };
-
-#ifdef __cplusplus
-}
-#endif
