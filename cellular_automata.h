@@ -9,24 +9,28 @@
 #define _CELLUAR_AUTOMATA_H_
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <map.h>
 
-struct celluar_map;
-typedef struct celluar_map celluar_map_t;
-typedef map_bool_t celluar_rule_t;
+    struct celluar_map;
+    typedef struct cellular_map *cellular_map_t;
+    typedef bool *cellular_rule_t;
 
-celluar_rule_t create_random_rule();
-celluar_rule_t read_rule(FILE file);
-void save_rule(FILE file, celluar_rule_t rule);
-celluar_map_t create_map(int32_t height, int32_t width);
-void output_map(FILE file, celluar_map_t map);
-void update_map(celluar_map_t map, celluar_rule_t rule);
+    cellular_rule_t create_random_rule();
+    cellular_rule_t read_rule(FILE *input);
+    void save_rule(FILE *output, const cellular_rule_t rule);
+    cellular_map_t create_random_map(const int32_t height, const int32_t width);
+    void save_map(FILE *output, const cellular_map_t map);
+    void update_map(const cellular_map_t map, const cellular_rule_t rule);
+
+    cellular_map_t read_model(const FILE *input);
+    int32_t get_fitness(const cellular_map_t map, const cellular_map_t model);
+    cellular_rule_t mix_rules(const cellular_rule_t rule1, const cellular_rule_t rule2);
 
 #ifdef __cplusplus
 }
